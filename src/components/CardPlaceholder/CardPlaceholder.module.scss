@@ -1,0 +1,48 @@
+@use "@/variables" as global;
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.card-placeholder {
+  gap: 1rem;
+  flex-direction: row;
+  height: 154px;
+
+  * {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .avatar-placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: global.$light-gray;
+  }
+
+  .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap:0.25rem;
+
+    .name-placeholder {
+      background-color: global.$light-gray;
+      width: 40%;
+      border-radius: 0.5rem;
+      height: 1.5rem;
+    }
+
+    .description-placeholder {
+      height: 21px;
+      border-radius: 0.5rem;
+      background-color: global.$light-gray;
+    }
+  }
+}

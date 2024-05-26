@@ -1,0 +1,25 @@
+@use "@/variables" as global;
+
+.button {
+  height: 40px;
+  background-color: global.$dark-gray;
+  color: white;
+  border: 0;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: global.$light-gray;
+    color: global.$gray;
+    cursor: not-allowed;
+    &:hover {
+      opacity: inherit;
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,31 @@
+@use "@/variables" as global;
+
+.header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    color: global.$gray;
+  }
+
+  .nav {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      display: flex;
+      transition: all 0.3s;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background-color: global.$light-gray;
+      }
+    }
+  }
+}

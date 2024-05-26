@@ -1,0 +1,19 @@
+@use "@/variables" as global;
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid global.$light-gray;
+  border-radius: 0.5rem;
+  font-size: global.$text-sm;
+  outline: none;
+
+  &::placeholder {
+    color: global.$gray;
+  }
+
+  &:focus {
+    outline: 2px solid global.$dark-gray;
+  }
+}

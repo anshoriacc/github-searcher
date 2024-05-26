@@ -1,0 +1,11 @@
+@use "@/variables" as global;
+
+.badge{
+    display: inline-block;
+    padding: 0 0.5rem;
+    border-radius: 1rem;
+    font-size: global.$text-xs;
+    color: white;
+    background-color: global.$dark-gray;
+    text-wrap: nowrap;
+}

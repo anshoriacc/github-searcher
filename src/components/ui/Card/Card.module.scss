@@ -1,0 +1,12 @@
+@use "@/variables" as global;
+
+.card {
+  position: relative;
+  padding: 1rem;
+  border: 1px solid global.$light-gray;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  //   box-shadow: 0 2px0.25rem rgba(0, 0, 0, 0.1);
+}

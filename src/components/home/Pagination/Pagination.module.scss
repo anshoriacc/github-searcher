@@ -1,0 +1,19 @@
+@use "@/variables" as global;
+
+.pagination {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+
+  p {
+    color: global.$gray;
+    font-size: global.$text-sm;
+  }
+
+  .buttons{
+    display: flex;
+    gap: 0.5rem;
+  }
+}
