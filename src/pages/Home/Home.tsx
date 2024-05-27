@@ -10,7 +10,7 @@ const HomePage = () => {
   const [filter] = useUrlState({ query: "" });
 
   return (
-    <Container style={{ justifyContent: !filter.query ? "center" : undefined }}>
+    <Container>
       <Header />
 
       <Filter />
