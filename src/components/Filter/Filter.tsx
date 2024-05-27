@@ -21,17 +21,14 @@ const Filter = () => {
     []
   );
 
-  const [filter, setFilter] = useUrlState(
-    {
-      type: "users",
-      query: undefined,
-      first: 10,
-      after: undefined,
-      before: undefined,
-      last: undefined,
-    },
-    { parseOptions: { parseNumbers: true } }
-  );
+  const [filter, setFilter] = useUrlState({
+    type: "users",
+    query: undefined,
+    first: 10,
+    after: undefined,
+    before: undefined,
+    last: undefined,
+  });
 
   const handleFilterChange = useCallback(
     (key: keyof typeof filter, value: string) => {

@@ -10,23 +10,24 @@ import Button from "@/components/ui/Button/Button";
 import { useCallback, useMemo } from "react";
 
 const Pagination = () => {
-  const [filter, setFilter] = useUrlState(
-    {
-      type: "users",
-      query: undefined,
-      first: undefined,
-      after: undefined,
-      before: undefined,
-      last: undefined,
-    },
-    { parseOptions: { parseNumbers: true } }
-  );
+  const [filter, setFilter] = useUrlState({
+    type: "users",
+    query: undefined,
+    first: undefined,
+    after: undefined,
+    before: undefined,
+    last: undefined,
+  });
 
   const { data: repositoriesData } = useGetRepositoriesQuery(
     {
       query: filter.query,
-      first: filter.first ? filter.first : filter.last ? undefined : 10,
-      last: filter.last,
+      first: filter.first
+        ? parseInt(filter.first)
+        : filter.last
+        ? undefined
+        : 10,
+      last: filter.last ? parseInt(filter.last) : undefined,
       after: filter.after,
       before: filter.before,
     },
@@ -36,8 +37,12 @@ const Pagination = () => {
   const { data: usersData } = useGetUsersQuery(
     {
       query: filter.query,
-      first: filter.first ? filter.first : filter.last ? undefined : 10,
-      last: filter.last,
+      first: filter.first
+        ? parseInt(filter.first)
+        : filter.last
+        ? undefined
+        : 10,
+      last: filter.last ? parseInt(filter.last) : undefined,
       after: filter.after,
       before: filter.before,
     },
